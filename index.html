@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="/Portfolio-Atharva-2024/Images/mushroom.png">
     <title>Atharva's Portfolio 2024</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,8 +71,8 @@
         
         .main {
             position: absolute; /* Set position to absolute */
-            bottom: 20px; /* Add bottom spacing */
-            right: 80px; /* Add right spacing */
+            bottom: 100px; /* Add bottom spacing */
+            right: 180px; /* Add right spacing */
             color: white;
             font-family: "Apfel Grotezk";
             font-size: 64px;
@@ -85,6 +86,28 @@
             position: relative;
             color: #818181 ;
             transition: transform 0.3s ease;
+          }
+          .underline{
+            display:inline-block;
+            position : relative;
+            color:white;
+            transition:transform 0.3s ease;
+          }
+          .underline:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          .underline:hover:after{
+            transform: scaleX(1);
+            transform-origin: bottom left;
           }
           
           .hover-underline-animation:after {
@@ -122,7 +145,7 @@
         .footer a {
             color: white; /* Set link color */
             text-decoration: none; /* Remove underline */
-            margin: 0 10px; /* Add margin between links */
+            margin: 0 25px; /* Add margin between links */
         }
         
 
@@ -145,10 +168,10 @@
         bathroom singer.
     </h1>
     <div class="footer">
-        <a href="#" >LinkedIn</a>
-        <a href="#">Behance</a>
-        <a href="#">Email</a>
-        <a href="#">Dribble</a>
+        <a href="#" class="underline" >LinkedIn</a>
+        <a href="#" class="underline">Behance</a>
+        <a href="#" class="underline">Email</a>
+        <a href="#" class="underline">Dribble</a>
     </div>
     
 
