@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="icon" href="/Portfolio-Atharva-2024/Images/mushroom.png">
-    <title>Atharva's Portfolio 2024</title>
+    <title>Atharva Kamat</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -22,12 +22,11 @@
 
         @font-face {
             font-family: "Apfel Grotezk";
-            src: url('/Atharva-s-Portfolio-2024/fonts/ApfelGrotezk-Regular.otf') format('woff2'),
-                 url('/Atharva-s-Portfolio-2024/fonts/ApfelGrotezk-Regular.otf') format('woff');
+            src: url('/Portfolio-Atharva-2024/fonts/ApfelGrotezk-Regular.otf') format('woff2'),
+                 url('/Portfolio-Atharva-2024/fonts/ApfelGrotezk-Regular.otf') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
         .main {
             text-align: right; /* Align text to the right */
             margin-right: auto; /* Push main content to the right */
@@ -86,6 +85,7 @@
             position: relative;
             color: #818181 ;
             transition: transform 0.3s ease;
+    
           }
           .underline{
             display:inline-block;
@@ -126,6 +126,7 @@
           .hover-underline-animation:hover:after {
             transform: scaleX(1);
             transform-origin: bottom left;
+            color:white;
           }
           .footer {
             position: fixed;
@@ -155,12 +156,18 @@
             font-weight: 400;
             line-height: normal;
         }
-
+        .hover-underline-animation:hover {
+            color: white;
+        }
+        
     </style>
 </head>
 <body>
     <div class="global grid grid-cols-8 gap-4">
-        <nav> 
+        <div class="menu-icon" onclick="toggleNav()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav id="navbar"> 
             <ul class="nav-list">
                 <li class="nav-item"><a href="#" class="hover-underline-animation">Selected Work</a></li>
                 <li class="nav-item"><a href="#" class="hover-underline-animation">Playbook</a></li>
@@ -184,6 +191,11 @@
         <a>@ Atharva Kamat</a>
     </div>
 
-    <script src="" async defer></script>
+    <script src="" async defer>
+        function toggleNav() {
+            var nav = document.getElementById("navbar");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
