@@ -81,20 +81,23 @@
             text-align:left;
             line-height: 112.5%;
         }
-          .hover-underline-animation {
+        .hover-underline-animation {
             display: inline-block;
             position: relative;
             color: #818181 ;
             transition: transform 0.3s ease;
     
-          }
-          .underline{
+        }
+        
+        .underline{
             display:inline-block;
             position : relative;
             color:white;
             transition:transform 0.3s ease;
-          }
-          .underline:after{
+          
+        }
+        
+        .underline:after{
             content: '';
             position: absolute;
             width: 100%;
@@ -105,13 +108,16 @@
             background-color: white;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
-          }
-          .underline:hover:after{
+        
+        }
+        
+        .underline:hover:after{
             transform: scaleX(1);
             transform-origin: bottom left;
-          }
+        
+        }
           
-          .hover-underline-animation:after {
+        .hover-underline-animation:after {
             content: '';
             position: absolute;
             width: 100%;
@@ -122,14 +128,15 @@
             background-color: white;
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
-          }
+        }
           
-          .hover-underline-animation:hover:after {
+        .hover-underline-animation:hover:after {
             transform: scaleX(1);
             transform-origin: bottom left;
             color:white;
-          }
-          .footer {
+        }
+          
+        .footer {
             position: fixed;
             font-size:20px;
             bottom: 0;
@@ -142,14 +149,19 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .footer a {
-            color: white; /* Set link color */
+            color: #ffffff; /* Set link color */
             text-decoration: none; /* Remove underline */
             margin: 0 25px; /* Add margin between links */
         }
-        .atharva{
+        
+        .atharva a, .design a{
             color: #818181;
             font-family: "Apfel Grotezk";
             font-size: 20px;
@@ -157,11 +169,13 @@
             font-weight: 400;
             line-height: normal;
         }
+        
         .hover-underline-animation:hover {
             color: white;
             transform: scale(1.1); /* Increase size by 10% */
             transition: transform 0.3s ease;
         }
+        
         .mainfoot {
             display: flex;
             justify-content: space-between;
@@ -184,15 +198,16 @@
         individual, and a professional<br>
         bathroom singer.
     </h1>
-    <div class="mainfoot">
-        <div class="footer">
+    
+    <div class="footer">
+        <div class="atharva text-gray-700">
+            <a>@ Atharva Kamat</a>
+        </div>
+        <div class="footer-links">
             <a href="#" class="underline">LinkedIn</a>
             <a href="#" class="underline">Behance</a>
             <a href="#" class="underline">Email</a>
             <a href="#" class="underline">Dribble</a>
-        </div>
-        <div class="atharva">
-            <a>@ Atharva Kamat</a>
         </div>
         <div class="design">
             <a>Design Portfolio 2024</a>
