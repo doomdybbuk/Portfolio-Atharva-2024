@@ -27,6 +27,7 @@
             font-weight: normal;
             font-style: normal;
         }
+        
         .main {
             text-align: right; /* Align text to the right */
             margin-right: auto; /* Push main content to the right */
@@ -81,6 +82,7 @@
             text-align:left;
             line-height: 112.5%;
         }
+        
         .hover-underline-animation {
             display: inline-block;
             position: relative;
@@ -172,8 +174,6 @@
         
         .hover-underline-animation:hover {
             color: white;
-            transform: scale(1.1); /* Increase size by 10% */
-            transition: transform 0.3s ease;
         }
         
         .mainfoot {
@@ -210,7 +210,56 @@
         .logo-link:hover .logo-img {
             transform: scale(1.1);
         }
+
+        /* Cards */
+
+        .card {
+            height: 550px;
+            border-radius: 10px;
+            display: flex;
+            gap: 5px;
+            padding: .4em;
+        }
+
+        .card p {
+            height: 100%;
+            flex: 1;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all .5s;
+            border: 1px solid #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(/HomePage-Projects/Images/1.png);
+        }
+
+        .card p:hover {
+            flex: 4;
+        }
+
+        .card p span {
+            min-width: 14em;
+            padding: .5em;
+            text-align: center;
+            transform: rotate(-90deg);
+            transition: all .5s;
+            text-transform: uppercase;
+            color: #ff568e;
+            letter-spacing: .1em;
+        }
+
+        .card p:hover span {
+            transform: rotate(0);
+        }
         
+        .middle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     </style>
 </head>
 <body>
@@ -223,13 +272,22 @@
             </ul>
         </nav>
     </div>
+    
     <a href="/index.html" class="logo-link">
         <div class="logo">
             <img src="/Images/mushroom.png" class="logo-img">
         </div>
     </a>
     
-    
+    <div class="middle">
+        <div class="card">
+            <p><span></span></p>
+            <p><span></span></p>
+            <p><span></span></p>
+            <p><span></span></p>
+            <p><span></span></p>
+        </div>
+    </div>
     
     <div class="footer">
         <div class="atharva text-gray-700">
