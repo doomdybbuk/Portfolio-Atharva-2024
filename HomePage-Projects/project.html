@@ -198,6 +198,19 @@
               padding-left:15px;
             }
           }
+          .logo-link {
+            display: inline-block;
+            overflow: hidden;
+        }
+        
+        .logo-img {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .logo-link:hover .logo-img {
+            transform: scale(1.1);
+        }
+        
     </style>
 </head>
 <body>
@@ -210,15 +223,13 @@
             </ul>
         </nav>
     </div>
-    <div class="logo">
-        <img src="/Images/mushroom.png">
-    </div>
-    <h1 class="main">
-        Hello! I'm Atharva Kamat —<br>
-        experience designer, creative<br>
-        individual, and a professional<br>
-        bathroom singer.
-    </h1>
+    <a href="/index.html" class="logo-link">
+        <div class="logo">
+            <img src="/Images/mushroom.png" class="logo-img">
+        </div>
+    </a>
+    
+    
     
     <div class="footer">
         <div class="atharva text-gray-700">
