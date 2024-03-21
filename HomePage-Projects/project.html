@@ -232,37 +232,45 @@
             animation: fadeInRight 1s ease-in-out;
         }
 
-        .card p {
+        .card a {
             height: 100%;
             flex: 1;
             overflow: hidden;
             cursor: pointer;
             border-radius: 2px;
             transition: all .5s;
-            border: 1px solid #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url(/HomePage-Projects/Images/1.png);
+            background-image: url(/HomePage-Projects/Images/1.jpg);
+            background-repeat: no-repeat;
         }
 
-        .card p:hover {
+        .card a:hover {
             flex: 4;
+            background-size: 100%;
         }
 
-        .card p span {
-            min-width: 14em;
-            padding: .5em;
-            text-align: center;
-            transform: rotate(-90deg);
-            transition: all .5s;
-            text-transform: uppercase;
-            color: #ff568e;
-            letter-spacing: .1em;
+        .card a span {
+            display: none;
+            color: rgb(255, 255, 255);
+            font-family: "Apfel Grotezk";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            position: absolute;
+            bottom: 0;
+        }
+
+        .card a:hover span {
+            display: block;
         }
 
         .card p:hover span {
             transform: rotate(0);
+            display: contents;
         }
         
         .middle{
@@ -292,13 +300,47 @@
         </div>
     </a>
     
-    <div class="middle">
+    <div class="middle mt-10 px-3 w-full">
         <div class="card">
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
+            <a href="#">
+                <span class="px-3 w-1/2">
+                    <strong>LOREM</strong><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
+            <a href="#">
+                <span class="px-3 w-1/2">
+                    <strong>LOREM</strong><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
+            <a href="#">
+                <span class="px-3 w-1/2">
+                    <strong>LOREM</strong><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
+            <a href="#"><span class="px-3 w-1/2">
+                <strong>LOREM</strong><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
+            <a href="#">
+                <span class="px-3 w-1/2">
+                    <strong>LOREM</strong><br>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
         </div>
     </div>
     
