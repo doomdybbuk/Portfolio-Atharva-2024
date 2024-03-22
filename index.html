@@ -191,7 +191,7 @@
 
         .scroll-to-see-selected-work{
             color: #D9D9D9;
-            font-family: "Neue Haas Grotesk Display Pro";
+            font-family: "Apfel Grotezk";
             font-size: 30.025px;
             font-style: normal;
             font-weight: 500;
@@ -278,6 +278,18 @@
             }
         }
 
+        /* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+    .scroll-container {
+        display: flex;
+        align-items: center; /* Align items vertically */
+    }
+
+    .scroll-link {
+        margin-right: 10px; /* Add some space between the link and the SVG */
+    }
+}
+
 
         
     </style>
@@ -312,10 +324,17 @@
         individual, and a professional<br>
         bathroom singer.
     </h1>
-
-    <a href="" class="scroll-link">
-        <span class="scroll-to-see-selected-work">Scroll here to see selected work</span>
-    </a>
+    <div class="scroll-container">
+        <a href="" class="scroll-link">
+            <span class="scroll-to-see-selected-work">Scroll here to see selected work</span>
+        </a>
+    
+        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18.5" cy="18.5" r="17.5" stroke="#D9D9D9" stroke-width="2"/>
+            <path d="M12.2104 24.2102L23.7057 12.7149" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round"/>
+            <path d="M15.8108 12.189H24.232V20.6102" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
 
     <div class="footer">
         <div class="atharva text-gray-700">
