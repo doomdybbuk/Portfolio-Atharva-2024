@@ -216,6 +216,69 @@
               padding-left:15px;
             }
         }
+        /* Hamburger Menu Styles */
+        /* SVG Icon Styles */
+                    /* SVG Icon Styles */
+        .svg-icon {
+            display: none; /* Hide the SVG icon by default */
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+
+        .svg-icon svg {
+            width: 65px; /* Adjust the size as needed */
+            height: 65px; /* Adjust the size as needed */
+            fill: black; /* Color of the SVG icon */
+            flex-shrink:0;
+        }
+
+        /* Media Query for Mobile */
+        @media only screen and (max-width: 768px) {
+            .footer {
+                display: none; /* Hide footer in mobile view */
+            }
+
+            #navbar {
+                display: none; /* Hide navigation menu by default on smaller screens */
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: black; /* Background color for the mobile menu */
+                width: 100%;
+                padding-top: 80px; /* Adjust as needed based on your design */
+                transition: transform 0.3s ease;
+            }
+
+            #navbar.active {
+                display: block; /* Show navigation menu when active */
+            }
+
+            .nav-list {
+                text-align: center; /* Center align the navigation links */
+            }
+
+            .nav-item {
+                margin-bottom: 20px; /* Add spacing between navigation items */
+            }
+
+            /* Show SVG icon for mobile */
+            .svg-icon {
+                display: block;
+            }
+        }
+
+        /* Media Query for Desktop */
+        @media only screen and (min-width: 769px) {
+            /* Hide SVG icon for desktop */
+            .svg-icon {
+                display: none;
+            }
+        }
+
+
         
     </style>
 </head>
@@ -228,6 +291,15 @@
                 <li class="nav-item"><a href="#" class="hover-underline-animation">About</a></li>
             </ul>
         </nav>
+
+        <!-- SVG Icon -->
+        <div class="svg-icon" onclick="toggleNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
+                <circle cx="32.5" cy="32.5" r="32.5" fill="white"/>
+                <path d="M32 19L32 45" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                <path d="M45 32L19 32" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </div>
     </div>
 
     <div class="logo">
@@ -241,7 +313,7 @@
         bathroom singer.
     </h1>
 
-    <a href="">
+    <a href="" class="scroll-link">
         <span class="scroll-to-see-selected-work">Scroll here to see selected work</span>
     </a>
 
