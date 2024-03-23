@@ -22,7 +22,7 @@
         body {
             background-color: black;
             margin: 0;
-            padding: 20px; /* Add padding for spacing */
+            /* padding: 20px;*/
             height: 90vh;
             display: flex;
             align-items: center; /* Center content vertically */
@@ -61,6 +61,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            z-index: 1;
         }
         
         nav ul {
@@ -71,7 +72,7 @@
         
         nav ul li {
             display: inline; /* Display list items inline */
-            margin-right: 49px; /* Add spacing between list items */
+            margin-right: 25px; /* Add spacing between list items */
         }
         
         nav ul li a {
@@ -155,7 +156,7 @@
 
             left: 0;
             width: 100%; /* Set background color */
-            padding: 20px; /* Add padding */
+            padding: 0px 20px 20px 20px; /* Add padding */
             color: #D9D9D9; /* Set text color */
             text-align: center; /* Center align text */
             font-style: normal;
@@ -208,9 +209,11 @@
               padding-left:15px;
             }
           }
-          .logo-link {
+          
+        .logo-link {
             display: inline-block;
             overflow: hidden;
+            z-index: 1;
         }
         
         .logo-img {
@@ -224,12 +227,12 @@
         /* Cards */
 
         .card {
-            height: 550px;
             border-radius: 10px;
             display: flex;
             gap: 5px;
-            padding: .4em;
             animation: fadeInRight 1s ease-in-out;
+            margin-right: 25px;
+            margin-left: 25px;
         }
 
         .card a {
@@ -239,11 +242,10 @@
             cursor: pointer;
             border-radius: 2px;
             transition: all .5s;
-            display: flex;
+            display: block;
             justify-content: center;
             align-items: center;
-            background-image: url(/HomePage-Projects/Images/1.jpg);
-            background-repeat: no-repeat;
+            border-radius: 10px;
         }
 
         .card a:hover {
@@ -268,9 +270,18 @@
             display: block;
         }
 
-        .card p:hover span {
-            transform: rotate(0);
+        .card a:hover span {
             display: contents;
+        }
+
+        .card a img{
+            overflow: hidden;
+        }
+
+        .card a:hover img{
+            width: 100%;
+            height: 75%;
+            transition: transform 0.25s ease-out;
         }
         
         .middle{
@@ -295,48 +306,54 @@
     </div>
     
     <a href="/index.html" class="logo-link">
-        <div class="logo">
+        <div class="logo" style="margin: 0 25px;">
             <img src="/Images/mushroom.png" class="logo-img">
         </div>
     </a>
     
-    <div class="middle mt-10 px-3 w-full">
-        <div class="card">
+    <div class="middle px-3 w-full h-full z-0" style="">
+        <div class="card h-5/6 mt-24">
             <a href="#">
+                <img src="/HomePage-Projects/Images/1.jpg" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
             <a href="#">
+                <img src="/HomePage-Projects/Images/2.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
             <a href="#">
+                <img src="/HomePage-Projects/Images/3.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
-                </span>
-            </a>
-            <a href="#"><span class="px-3 w-1/2">
-                <strong>LOREM</strong><br>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
-                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
-                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
             <a href="#">
+                <img src="/HomePage-Projects/Images/4.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere sint mollitia voluptatum laboriosam dolorum nesciunt maxime fugit ex sequi eius fuga nulla error autem praesentium consequatur, aut dignissimos minima tempore. <br>
+                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                    <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
+                </span>
+            </a>
+            <a href="#">
+                <img src="/HomePage-Projects/Images/5.png" class="h-full" alt="">
+                <span class="px-3 w-1/2">
+                    <strong>LOREM</strong><br>
+                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
