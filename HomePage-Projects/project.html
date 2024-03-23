@@ -274,6 +274,16 @@
         .card a:hover span {
             display: contents;
         }
+
+        .card a img{
+            overflow: hidden;
+        }
+
+        .card a:hover img{
+            width: 100%;
+            height: 75%;
+            transition: transform 1s ease-out;
+        }
         
         .middle{
             position: absolute;
@@ -282,11 +292,16 @@
             transform: translate(-50%,-50%);
         }
 
+        /*                             */
+
+        .mobileCard{
+            align-items: center;
+        }
 
     </style>
 </head>
 <body>
-    <div class="global grid grid-cols-8 gap-4">
+    <div class="hidden md:block grid grid-cols-8 gap-4">
         <nav id="navbar"> 
             <ul class="nav-list">
                 <li class="nav-item"><a href="/HomePage-Projects/project.html" class="hover-underline-animation">Selected Work</a></li>
@@ -302,18 +317,19 @@
         </div>
     </a>
     
-    <div class="middle mt-10 px-3 w-full">
-        <div class="card">
-            <a href="#">
-                <img src="/HomePage-Projects/Images/1.jpg" class="h-full" alt="">
+    <div class="hidden lg:block middle px-3 w-full h-full z-0" style="">
+        <div class="card h-5/6 mt-24">
+            <a class="mx-2" href="#">
+                <img src="/HomePage-Projects/Images/1-half.jpg" class="block hover:hidden h-full" alt="">
+                <img src="/HomePage-Projects/Images/1.jpg" class="hidden hover:block h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
-                    Together with the best publishers, authors and creators, Lylli offers unlimi <br>
+                    <span> with the best publishers, authors and creators, Lylli offers unlimi </span> <br>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
-            <a href="#">
+            <a class="mx-2" href="#">
                 <img src="/HomePage-Projects/Images/2.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
@@ -322,7 +338,7 @@
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
-            <a href="#">
+            <a class="mx-2" href="#">
                 <img src="/HomePage-Projects/Images/3.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
@@ -331,7 +347,7 @@
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
-            <a href="#">
+            <a class="mx-2" href="#">
                 <img src="/HomePage-Projects/Images/4.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
@@ -340,7 +356,7 @@
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
-            <a href="#">
+            <a class="mx-2" href="#">
                 <img src="/HomePage-Projects/Images/5.png" class="h-full" alt="">
                 <span class="px-3 w-1/2">
                     <strong>LOREM</strong><br>
@@ -349,6 +365,20 @@
                     <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">LOREM</button>
                 </span>
             </a>
+        </div>
+    </div>
+
+    <div class="block md:hidden w-full">
+        <div class="p-3">
+            <div class="">
+                <img class="w-full" src="/HomePage-Projects/Images/1-mobile.png" alt="">
+            </div>
+            <span class="text-white" style="margin-top: 20px;">
+                <strong class="">Zenova</strong><br>
+                Together with the best publishers, authors and creators, Lylli offers unlimi <br>
+                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
+                <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+            </span>
         </div>
     </div>
     
