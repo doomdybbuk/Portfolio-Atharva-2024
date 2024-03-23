@@ -217,9 +217,6 @@
               padding-left:20px;
               margin-left:1px;
               margin-bottom:30px;
-              padding-left:20px;
-              margin-left:1px;
-              margin-bottom:30px;
             }
         }
         /* Hamburger Menu Styles */
@@ -240,7 +237,27 @@
             fill: black; /* Color of the SVG icon */
             flex-shrink:0;            
         }
-
+        @media only screen and (max-width:768px){
+            .scroll-to-see-selected-work{
+                position: absolute;
+                top: 90%; /* Adjust as needed */
+                left: 5%; /* Adjust as needed */
+                color: #9D9D9D;
+                font-family: "Apfel Grotezk";
+                font-size: 23.004px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -0.23px;
+            }
+        }
+        @media only screen and (max-width:768px){
+            .logo{
+                width:57px;
+                height:57px;
+                flex-shrink:0;
+            }
+        }
         /* Media Query for Mobile */
         @media only screen and (max-width: 768px) {
             .footer {
@@ -301,7 +318,7 @@
     </style>
 </head>
 <body>
-    <div class="global grid grid-cols-8 gap-4">
+    <div class="global grid grid-cols-8 gap-4 lg-col-span-12">
         <nav id="navbar"> 
             <ul class="nav-list">
                 <li class="nav-item"><a href="/HomePage-Projects/project.html" class="hover-underline-animation">Selected Work</a></li>
@@ -321,7 +338,6 @@
     <div class="logo" style="margin: 0 25px;">
         <img src="/Images/mushroom.png">
     </div>
-
     <a href="/HomePage-Projects/project.html" class="scroll-link">
         <span class="scroll-to-see-selected-work">Scroll here to see selected work</span>
         <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -330,14 +346,12 @@
             <path d="M15.8108 12.189H24.232V20.6102" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>           
     </a>
-
-    <h1 class="main md:w-full">
-        Hello! I'm<br class="block md:hidden"> Atharva Kamat —<br>
-        experience designer,<br class="block md:hidden"> creative<br class="hidden md:block">
-        individual, and<br class="block md:hidden"> a professional<br>
+    <h1 class="main">
+        Hello! I'm <br class="block md:hidden">Atharva Kamat <br class="block md:hidden">—<br class="block md:hidden"><br class="block md:hidden"><br class="hidden md:block">
+        experience designer, <br class="block md:hidden">creative<br class="hidden md:block">
+        individual, and <br class="block md:hidden">a professional<br class="block md:hidden"><br class="hidden md:block">
         bathroom singer.
     </h1>
-
     <div class="footer">
         <div class="atharva text-gray-700">
             <a>@ Atharva Kamat</a>
