@@ -239,7 +239,16 @@
         }
         @media only screen and (max-width:768px){
             .scroll-to-see-selected-work{
-                display:none;
+                position: absolute;
+                top: 90%; /* Adjust as needed */
+                left: 5%; /* Adjust as needed */
+                color: #9D9D9D;
+                font-family: "Apfel Grotezk";
+                font-size: 23.004px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: -0.23px;
             }
         }
         @media only screen and (max-width:768px){
@@ -269,7 +278,6 @@
             #navbar.active {
                 display: block; /* Show navigation menu when active */
             }
-
             .nav-list {
                 text-align: center; /* Center align the navigation links */
             }
@@ -293,9 +301,7 @@
         }
         .scroll-link {
             display: inline-block; /* Make the link and SVG appear inline */
-            vertical-align: middle; /* Align vertically */
-            margin-top:540px;
-            margin-right: 1350px; /* Add some space between the link and the SVG */
+            vertical-align: middle; /* Align vertically */ /* Add some space between the link and the SVG */
         }
         .scroll-link:hover svg {
             transform: rotate(45deg); /* Rotate the SVG by 45 degrees on hover */
@@ -303,49 +309,62 @@
         .scroll-link svg {
             transition: transform 0.3s ease; /* Apply transition effect for smooth rotation */
         }
-        .svg-icon:hover svg {
-            transform: rotate(45deg); /* Rotate the SVG 45 degrees on hover */
-            transition: transform 0.3s ease; /* Add transition effect for smooth animation */
+        /* Initially hide the navigation on small screens */
+        /* Initially hide the navigation on small screens */
+        #navbar.hidden {
+            display: none;
         }
+
+        /* Show the navigation on medium and larger screens */
+        #navbar.md\:block {
+            display: block;
+        }
+        .rotate {
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+        
+
+
     </style>
 </head>
 <body>
     <div class="global grid grid-cols-8 gap-4 lg-col-span-12">
-        <nav id="navbar"> 
+        <nav id="navbar" class="hidden md:block"> 
             <ul class="nav-list">
                 <li class="nav-item"><a href="/HomePage-Projects/project.html" class="hover-underline-animation">Selected Work</a></li>
                 <li class="nav-item"><a href="#" class="hover-underline-animation">Playbook</a></li>
                 <li class="nav-item"><a href="#" class="hover-underline-animation">About</a></li>
             </ul>
         </nav> 
-        <div class="svg-icon" onclick="toggleNav()">
-            <svg id="mySvg" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none" onclick="rotateSVG()">
+        <div class="svg-icon md:hidden" onclick="toggleNav()">
+            <svg id="mySvg" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
                 <circle cx="32.5" cy="32.5" r="32.5" fill="white"/>
-                <path d="M32 19L32 45" stroke="black" stroke-width="3" stroke-linecap="round"/>
-                <path d="M45 32L19 32" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                <path id="line1" d="M32 19L32 45" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                <path id="line2" d="M45 32L19 32" stroke="black" stroke-width="3" stroke-linecap="round"/>
             </svg>
         </div>
     </div>
-
-    <div class="logo" style="margin: 0 25px;">
+    
+    <div class="logo cursor-pointer" style="margin: 0 25px;">
         <img src="/Images/mushroom.png">
     </div>
-    <a href="/HomePage-Projects/project.html" class="scroll-link">
+    <a href="/HomePage-Projects/project.html" class="scroll-link flex items-center space-x-2">
         <span class="scroll-to-see-selected-work">Scroll here to see selected work</span>
         <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="18.5" cy="18.5" r="17.5" stroke="#D9D9D9" stroke-width="2"/>
             <path d="M12.2104 24.2102L23.7057 12.7149" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round"/>
             <path d="M15.8108 12.189H24.232V20.6102" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>           
+        </svg>           
     </a>
-    <h1 class="main">
-        Hello! I'm Atharva Kamat —<br>
-        experience designer, creative<br>
-        individual, and a professional<br>
+    <h1 class="main cursor-pointer">
+        Hello! I'm <br class="block md:hidden">Atharva Kamat <br class="block md:hidden">—<br class="block md:hidden"><br class="block md:hidden"><br class="hidden md:block">
+        experience designer, <br class="block md:hidden">creative<br class="hidden md:block">
+        individual, and <br class="block md:hidden">a professional<br class="block md:hidden"><br class="hidden md:block">
         bathroom singer.
-    </h1>
+     </h1>
     <div class="footer">
-        <div class="atharva text-gray-700">
+        <div class="atharva text-gray-700 cursor-pointer">
             <a>@ Atharva Kamat</a>
         </div>
         <div class="footer-links">
@@ -354,16 +373,28 @@
             <a href="#" class="underline">Email</a>
             <a href="#" class="underline">Dribble</a>
         </div>
-        <div class="design">
+        <div class="design cursor-pointer">
             <a>Design Portfolio 2024</a>
         </div>
     </div>
 
     <script src="" async defer>
         function toggleNav() {
+            var nav = document.getElementById("navbar");
+            nav.classList.toggle("hidden");
+        }        
+        function toggleNav() {
+            var svg = document.getElementById('mySvg');
+            var line1 = document.getElementById('line1');
+            var line2 = document.getElementById('line2');
             var navbar = document.getElementById('navbar');
-            navbar.classList.toggle('active');
+            
+            svg.classList.toggle('rotate');
+            line1.style.display = 'none';
+            line2.style.display = 'none';
+            navbar.classList.toggle('hidden');
         }
+        
     </script>
 </body>
 </html>
