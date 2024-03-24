@@ -107,14 +107,18 @@
             }
 
             /* -------------GRID TEXTS------------- */
-            @media (max-width:767px){
+
+            @media(max-width:420px){
                 .container{
                     margin:0;
                     padding:175px 0;
                     position:relative;
                 }
                 .main{
-                    font-size:39.61px;
+                    font-size:32px;
+                }
+                .scroll-link{
+                    font-size:25px;
                 }
                 #div3 a svg{
                     transform:rotate(135deg);
@@ -132,6 +136,33 @@
                 }
             }
 
+            @media (min-width:421px) and (max-width:767px){
+                .container{
+                    margin:0;
+                    padding:175px 0;
+                    position:relative;
+                }
+                .main{
+                    font-size:38px;
+                }
+                .scroll-link{
+                    font-size:30px;
+                }
+                #div3 a svg{
+                    transform:rotate(135deg);
+                    width: 35px;
+                    height: 35px;
+                }
+                #card-container{
+                    padding-top:125px;
+                }
+                #mobile-menu-icon:hover{
+                    transform:rotate(45deg);
+                }
+                #mobile-menu-icon{
+                    transition:transform 0.3s ease;
+                }
+            }
 
             @media (min-width:768px) and (max-width: 1023px) {
                 .container {
