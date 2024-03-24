@@ -70,6 +70,46 @@
                 footer{
                     display:none;   
                 }
+                
+                .mobile-footer{
+                    display: block;
+                    margin-top: 25px;
+                }
+
+                .mobile-footer-text{
+                    color: #FFF;
+                    font-family: "Apfel Grotezk";
+                    font-size: 39.61px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 96%; /* 38.026px */
+                    letter-spacing: -0.396px;
+                }
+
+                .mobile-footer-links{
+                    color: #FFF;
+                    font-family: "Apfel Grotezk";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                }
+
+                .mobile-footer-sign{
+                    color: #818181;
+                    font-family: "Apfel Grotezk";
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            @media (min-width:768){
+                .mobile-footer{
+                    display: none;
+                }
             }
 
             footer {
@@ -114,23 +154,25 @@
                     padding:175px 0;
                     position:relative;
                 }
-                .main{
-                    font-size:32px;
-                }
+
                 .scroll-link{
                     font-size:25px;
                 }
+
                 #div3 a svg{
                     transform:rotate(135deg);
                     width: 35px;
                     height: 35px;
                 }
+
                 #card-container{
                     padding-top:125px;
                 }
+
                 #mobile-menu-icon:hover{
                     transform:rotate(45deg);
                 }
+
                 #mobile-menu-icon{
                     transition:transform 0.3s ease;
                 }
@@ -142,23 +184,35 @@
                     padding:175px 0;
                     position:relative;
                 }
+
                 .main{
-                    font-size:38px;
+                    color: #FFF;
+                    font-family: "Apfel Grotezk";
+                    font-size: 38px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 96%; /* 36.48px */
+                    letter-spacing: -0.38px;
                 }
+
                 .scroll-link{
                     font-size:30px;
                 }
+
                 #div3 a svg{
                     transform:rotate(135deg);
                     width: 35px;
                     height: 35px;
                 }
+
                 #card-container{
                     padding-top:125px;
                 }
+
                 #mobile-menu-icon:hover{
                     transform:rotate(45deg);
                 }
+
                 #mobile-menu-icon{
                     transition:transform 0.3s ease;
                 }
@@ -218,9 +272,11 @@
             #div1{
                 color: #D9D9D9;
             }
+
             #div3{
                 color: #9D9D9D;
             }
+
             .scroll-to-see-selected-work {
                 font-family: "Apfel Grotezk";
                 font-size: 30px;
@@ -234,9 +290,11 @@
                 display:inline-block;
                 transition: transform 0.3s ease;
             }
+
             .scroll-to-see-selected-work:hover a svg{
                 transform:rotate(45deg);
             }
+
             .main {
                 color: #D9D9D9;
                 font-family: "Apfel Grotezk";
@@ -245,9 +303,6 @@
                 text-align:left;
                 line-height: 112.5%;
             }
-
-    
-
 
             /* -------------UNDERLINE ANIMATION-------------- */
 
@@ -340,8 +395,8 @@
             <div id="div2" class="main lg:text-left text-center">
                 <h1 class="">
                     Hello! I'm <br class="block md:hidden">Atharva Kamat <br class="block md:hidden">—<br class="block md:hidden"><br class="block md:hidden"><br class="hidden md:block">
-                    experience designer, <br class="block md:hidden">creative<br class="hidden md:block">
-                    individual, and <br class="block md:hidden">a professional<br class="block md:hidden"><br class="hidden md:block">
+                    experience designer, creative<br class="hidden md:block">
+                    individual, and a professional<br class="hidden md:block">
                     bathroom singer.
                 </h1>
             </div>
@@ -362,7 +417,7 @@
                         <img class="w-full" src="/HomePage-Projects/Images/1-mobile.png" alt="">
                     </div>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="">Zenova</strong><br>
+                        <strong class="mt-5">Zenova</strong><br>
                         Together with the best publishers, authors and creators, Lylli offers unlimi <br>
                         <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
                         <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
@@ -416,10 +471,27 @@
                         <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
                     </span>
                 </div>
-            </div>-->
+
+                <div class="mobile-footer">
+                    <h1 class="mobile-footer-text">
+                        —<br>
+                        Let’s talk shop
+                    </h1>
+
+                    <ul class="mobile-footer-links">
+                        <li class="mt-4">LinkedIn</li>
+                        <li class="mt-4">Email</li>
+                    </ul>
+
+                    <div class="mobile-footer-sign mt-6">
+                        Design Portfolio 2024<br> 
+                        @ Atharva Kamat
+                    </div>
+                </div>
+            </div>
         </div>  
                         
-        <footer class="">
+        <footer>
             <div class="atharva text-gray-700 hidden md:block">
                 <a>@ Atharva Kamat</a>
             </div>
