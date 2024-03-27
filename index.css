@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "Apfel Grotezk";
+    src: url('/fonts/ApfelGrotezk-Regular.otf') format('woff2'),
+        url('/fonts/ApfelGrotezk-Regular.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -----------------NAVBAR------------------ */
+@media (max-width:768px){
+    .mobile-links-group{
+        margin-top:125px;
+        margin-left:49px;
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 51.84px */
+        letter-spacing: -0.54px;
+    }
+    .mobile-link{
+        margin-top:14px;
+    }
+    .mobile-social-links-group{
+        margin-top:52px;
+        margin-left: 49px;
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .mobile-nav-footer{
+        margin-top: 53px;
+        margin-left: 49px;
+        color: #818181;
+        font-family: "Apfel Grotezk";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media (min-width:1024px){
+    nav ul {
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+    }
+    
+    nav ul li {
+        display: inline; 
+        margin-right: 25px; 
+    }
+    
+    nav ul li a {
+        text-decoration: none; 
+        color: inherit; 
+        font-size: 20px; 
+    }
+}
+nav {
+    color: #818181; 
+    font-family: "Apfel Grotezk"; 
+    position: absolute; 
+    font-size:20px;
+    top: 10px; 
+    right: 20px; 
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#mobile-navbar {
+    display: none;  
+}
+.rotate-45 {
+    transform: rotate(45deg);
+    transition:transform 0.3s ease;
+}
+/* -----------TOP LEFT LOGO------------- */
+
+.logo img {
+    height: 59px;
+    width: 59px;
+}
+
+/* ------------FOOTER------------------ */
+
+@media (max-width:767px){
+    footer{
+        display:none;   
+    }
+    
+    .mobile-footer{
+        display: block;
+        margin-top: 25px;
+    }
+
+    .mobile-footer-text{
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 39.61px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 38.026px */
+        letter-spacing: -0.396px;
+    }
+
+    .mobile-footer-links{
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+
+    .mobile-footer-sign{
+        color: #818181;
+        font-family: "Apfel Grotezk";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+@media (min-width:768){
+    .mobile-footer{
+        display: none;
+    }
+}
+
+footer {
+    position: fixed;
+    font-size:20px;
+    bottom: 0;
+
+    left: 0;
+    width: 100%; /* Set background color */
+    padding: 20px; /* Add padding */
+    color: #D9D9D9; /* Set text color */
+    text-align: center; /* Center align text */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: #ffffff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 25px; /* Add margin between links */
+}
+
+.atharva a, .design a{
+    color: #818181;
+    font-family: "Apfel Grotezk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* -------------GRID TEXTS------------- */
+
+@media(max-width:420px){
+    .container{
+        margin:0;
+        padding:175px 0;
+        position:relative;
+    }
+
+    #div3 a svg{
+        transform:rotate(135deg);
+        width: 35px;
+        height: 35px;
+    }
+    #div3{
+        color: #9D9D9D;
+        font-family: "Apfel Grotezk";
+        font-size: 23.004px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.23px;
+    }
+
+    #card-container{
+        padding-top:125px;
+    }
+}
+
+@media (min-width:421px) and (max-width:767px){
+    .container{
+        margin:0;
+        padding:175px 0;
+        position:relative;
+    }
+    #div2{
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 36.48px */
+        letter-spacing: -0.38px;
+    }
+    .main{
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 36.48px */
+        letter-spacing: -0.38px;
+    }
+
+
+    #div3 a svg{
+        transform:rotate(135deg);
+        width: 35px;
+        height: 35px;
+    }
+    #div3{
+        color: #9D9D9D;
+        font-family: "Apfel Grotezk";
+        font-size: 23.004px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.23px;
+    }
+
+    #card-container{
+        padding-top:125px;
+    }
+    .mobile-link-group{
+        margin-top:125px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1023px) {
+    .container {
+        display:none;
+    }
+    #div3{
+        display:none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1599px) {
+    .scroll-to-see-selected-work {
+        display: block;
+        width: 100%;
+        margin-bottom:20px;
+        font-size:64px;
+    }
+    .main {
+        display: block;
+        width: 100%;
+        text-align:center;
+        font-size:64px;
+    }
+    #div3{
+        display:none;
+    }
+    .container{
+        position:absolute;
+        top:40%;
+        left:15%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .scroll-to-see-selected-work, .main {
+        display: inline-block;
+        font-size:64px;
+    }
+    .main{
+        width:100vh;
+        font-size:64px;
+    }
+    #div3{
+        display:none;
+    }
+    .container{
+        position:absolute;
+        top:40%;
+        left:15%;
+    }
+}
+
+#div1{
+    color: #D9D9D9;
+}
+
+#div3{
+    color: #9D9D9D;
+}
+
+.scroll-to-see-selected-work {
+    font-family: "Apfel Grotezk";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.3px;
+}
+
+.scroll-to-see-selected-work a svg{
+    display:inline-block;
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-see-selected-work:hover a svg{
+    transform:rotate(45deg);
+}
+
+.main {
+    color: #D9D9D9;
+    font-family: "Apfel Grotezk";
+    font-weight: 400;
+    margin: 0;
+    text-align:left;
+    line-height: 112.5%;
+}
+
+/* -------------UNDERLINE ANIMATION-------------- */
+
+.hover-underline-animation {
+    position: relative;
+}
+.hover-underline-animation:hover {
+    color: white;
+}
+
+
+.underline{
+    display:inline-block;
+    position : relative;
+    color:white;
+    transition:transform 0.3s ease;
+
+}
+
+.underline:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+}
+
+.underline:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Text Mobile Card */
+.title-mobile{
+    color: #FFF;
+    font-family: "Apfel Grotezk";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.description-mobile{
+    color: #FFF;
+    font-family: "Apfel Grotezk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.button-mobile{
+    border-radius: 30px;
+    opacity: 0.2;
+    background: #D9D9D9;
+    font-family: "Apfel Grotezk";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.button-mobile span{
+    color: #FFF;
+    opacity:0.4;
+}

@@ -4,361 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/index.css">
         <link rel="icon" href="/Images/mushroom.png">
         <title>Atharva Kamat</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            @font-face {
-                font-family: "Apfel Grotezk";
-                src: url('/fonts/ApfelGrotezk-Regular.otf') format('woff2'),
-                    url('/fonts/ApfelGrotezk-Regular.otf') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-            
-            body {
-                background-color: black;
-                margin: 0;
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /* -----------------NAVBAR------------------ */
-
-            nav {
-                color: #818181; 
-                font-family: "Apfel Grotezk"; 
-                position: absolute; 
-                font-size:20px;
-                top: 20px; 
-                right: 20px; 
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            nav ul {
-                list-style: none; 
-                padding: 0; 
-                margin: 0; 
-            }
-            
-            nav ul li {
-                display: inline; 
-                margin-right: 25px; 
-            }
-            
-            nav ul li a {
-                text-decoration: none; 
-                color: inherit; 
-                font-size: 20px; 
-            }
-
-            /* -----------TOP LEFT LOGO------------- */
-
-            .logo img {
-                height: 59px;
-                width: 59px;
-            }
-
-            /* ------------FOOTER------------------ */
-
-            @media (max-width:767px){
-                footer{
-                    display:none;   
-                }
-                
-                .mobile-footer{
-                    display: block;
-                    margin-top: 25px;
-                }
-
-                .mobile-footer-text{
-                    color: #FFF;
-                    font-family: "Apfel Grotezk";
-                    font-size: 39.61px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 96%; /* 38.026px */
-                    letter-spacing: -0.396px;
-                }
-
-                .mobile-footer-links{
-                    color: #FFF;
-                    font-family: "Apfel Grotezk";
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    text-decoration-line: underline;
-                }
-
-                .mobile-footer-sign{
-                    color: #818181;
-                    font-family: "Apfel Grotezk";
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                }
-            }
-
-            @media (min-width:768){
-                .mobile-footer{
-                    display: none;
-                }
-            }
-
-            footer {
-                position: fixed;
-                font-size:20px;
-                bottom: 0;
-
-                left: 0;
-                width: 100%; /* Set background color */
-                padding: 20px; /* Add padding */
-                color: #D9D9D9; /* Set text color */
-                text-align: center; /* Center align text */
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            footer a {
-                color: #ffffff; /* Set link color */
-                text-decoration: none; /* Remove underline */
-                margin: 0 25px; /* Add margin between links */
-            }
-            
-            .atharva a, .design a{
-                color: #818181;
-                font-family: "Apfel Grotezk";
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            /* -------------GRID TEXTS------------- */
-
-            @media(max-width:420px){
-                .container{
-                    margin:0;
-                    padding:175px 0;
-                    position:relative;
-                }
-
-                .scroll-link{
-                    font-size:25px;
-                }
-
-                #div3 a svg{
-                    transform:rotate(135deg);
-                    width: 35px;
-                    height: 35px;
-                }
-
-                #card-container{
-                    padding-top:125px;
-                }
-
-                #mobile-menu-icon:hover{
-                    transform:rotate(45deg);
-                }
-
-                #mobile-menu-icon{
-                    transition:transform 0.3s ease;
-                }
-            }
-
-            @media (min-width:421px) and (max-width:767px){
-                .container{
-                    margin:0;
-                    padding:175px 0;
-                    position:relative;
-                }
-
-                .main{
-                    color: #FFF;
-                    font-family: "Apfel Grotezk";
-                    font-size: 38px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 96%; /* 36.48px */
-                    letter-spacing: -0.38px;
-                }
-
-                .scroll-link{
-                    font-size:30px;
-                }
-
-                #div3 a svg{
-                    transform:rotate(135deg);
-                    width: 35px;
-                    height: 35px;
-                }
-
-                #card-container{
-                    padding-top:125px;
-                }
-
-                #mobile-menu-icon:hover{
-                    transform:rotate(45deg);
-                }
-
-                #mobile-menu-icon{
-                    transition:transform 0.3s ease;
-                }
-            }
-
-            @media (min-width:768px) and (max-width: 1023px) {
-                .container {
-                    display:none;
-                }
-                #div3{
-                    display:none;
-                }
-            }
-
-            @media (min-width: 1024px) and (max-width: 1599px) {
-                .scroll-to-see-selected-work {
-                    display: block;
-                    width: 100%;
-                    margin-bottom:20px;
-                    font-size:64px;
-                }
-                .main {
-                    display: block;
-                    width: 100%;
-                    text-align:center;
-                    font-size:64px;
-                }
-                #div3{
-                    display:none;
-                }
-                .container{
-                    position:absolute;
-                    top:40%;
-                    left:15%;
-                }
-            }
-
-            @media (min-width: 1600px) {
-                .scroll-to-see-selected-work, .main {
-                    display: inline-block;
-                    font-size:64px;
-                }
-                .main{
-                    width:100vh;
-                    font-size:64px;
-                }
-                #div3{
-                    display:none;
-                }
-                .container{
-                    position:absolute;
-                    top:40%;
-                    left:15%;
-                }
-            }
-
-            #div1{
-                color: #D9D9D9;
-            }
-
-            #div3{
-                color: #9D9D9D;
-            }
-
-            .scroll-to-see-selected-work {
-                font-family: "Apfel Grotezk";
-                font-size: 30px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                letter-spacing: -0.3px;
-            }
-
-            .scroll-to-see-selected-work a svg{
-                display:inline-block;
-                transition: transform 0.3s ease;
-            }
-
-            .scroll-to-see-selected-work:hover a svg{
-                transform:rotate(45deg);
-            }
-
-            .main {
-                color: #D9D9D9;
-                font-family: "Apfel Grotezk";
-                font-weight: 400;
-                margin: 0;
-                text-align:left;
-                line-height: 112.5%;
-            }
-
-            /* -------------UNDERLINE ANIMATION-------------- */
-
-            .hover-underline-animation {
-                position: relative;
-            }
-            .hover-underline-animation:hover {
-                color: white;
-            }
-
-        
-            .underline{
-                display:inline-block;
-                position : relative;
-                color:white;
-                transition:transform 0.3s ease;
-            
-            }
-            
-            .underline:after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 1px;
-                bottom: 0;
-                left: 0;
-                background-color: white;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            
-            }
-            
-            .underline:hover:after{
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            
-            }
-            
-            .hover-underline-animation:after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 1px;
-                bottom: 0;
-                left: 0;
-                background-color: white;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            }
-            
-            .hover-underline-animation:hover:after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
         </style>    
     </head>
     
@@ -373,17 +24,35 @@
                 <li class="nav-item" style="display: inline;"><a href="#" class="hover-underline-animation">Playbook</a></li>
                 <li class="nav-item" style="display: inline;"><a href="#" class="hover-underline-animation">About</a></li>
             </ul>
-            <div id="mobile-menu-icon" class="md:hidden" style="position: absolute; right: 9px;">
+            <button id="mobile-menu-icon" class="md:hidden" style="position: absolute; right: 9px;">
                 <svg id="mySvg" xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65" fill="none">
                     <circle cx="32.5" cy="32.5" r="32.5" fill="white"/>
                     <path id="line1" d="M32 19L32 45" stroke="black" stroke-width="3" stroke-linecap="round"/>
                     <path id="line2" d="M45 32L19 32" stroke="black" stroke-width="3" stroke-linecap="round"/>
                 </svg>
+            </button>
+            <div id="mobile-navbar" class="md:hidden z-15 bg-black" style="height:100vh;">
+                <ul class="mobile-links-group ">
+                    <li class="mobile-link"><a href="/index.html">Home<a><br></li>
+                    <li class="mobile-link"><a href="#">Selected Work</a><br></li>
+                    <li class="mobile-link"><a href="#">Playbook</a><br></li>
+                    <li class="mobile-link"><a href="#">About</a><br></li>
+                </ul>
+                <ul class="mobile-social-links-group">
+                    <li class="mobile-social-link"><a href="#">LinkedIn</a></li>
+                    <li class="mobile-social-link"><a href="#"></a>Behance</li>
+                    <li class="mobile-social-link"><a href="#"></a>Email</li>
+                    <li class="mobile-social-link"><a href="#"></a>Dribble</li>
+                </ul>
+                <div class="mobile-nav-footer">
+                    Design Portfolio 2024<br> 
+                    @ Atharva Kamat
+                </div>
             </div>
         </nav>
         <div class="container">
             <div id="div1" class="scroll-to-see-selected-work lg:text-left hidden md:block">
-                <a href="/HomePage-Projects/project.html" class="scroll-link">
+                <a href="/HomePage-Projects/project.html" class="">
                     <span class="">Scroll to see selected work</span> 
                     <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="18.5" cy="18.5" r="17.5" stroke="#D9D9D9" stroke-width="2"/>
@@ -395,81 +64,121 @@
             <div id="div2" class="main lg:text-left text-center">
                 <h1 class="">
                     Hello! I'm <br class="block md:hidden">Atharva Kamat <br class="block md:hidden">—<br class="block md:hidden"><br class="block md:hidden"><br class="hidden md:block">
-                    experience designer, creative<br class="hidden md:block">
+                    <div class="inline-block md:hidden">E</div><div class="hidden md:inline-block">e</div>xperience designer, creative<br class="hidden md:block">
                     individual, and a professional<br class="hidden md:block">
                     bathroom singer.
                 </h1>
             </div>
             <div id="div3" class="scroll-to-see-selected-work lg:text-left mt-20 text-gray-600 ">
-                <a class="scroll-link">
+                <a class="">
                     <span class="">Scroll to see selected work</span>
                     <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="18.5" cy="18.5" r="17.5" stroke="#D9D9D9" stroke-width="2"/>
                         <path d="M12.2104 24.2102L23.7057 12.7149" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round"/>
                         <path d="M15.8108 12.189H24.232V20.6102" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
-                        
+                    </svg>  
                 </a>
             </div>
             <div id="card-container" class="md:hidden w-full">
                 <div class="p-3">
                     <div class="">
                         <img class="w-full" src="/HomePage-Projects/Images/1-mobile.png" alt="">
-                    </div>
+                    </div><br>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="mt-5">Zenova</strong><br>
-                        Together with the best publishers, authors and creators, Lylli offers unlimi <br>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+                        <strong class="title-mobile mt-5">Zenova</strong><br>
+                        <div style="margin-top: 13px;"> <!-- Adjust margin-top value as needed -->
+                            <a class="description-mobile">Together with the best publishers, authors and creators, Lylli offers unlimi</a> <br>
+                            <div style="margin-top:13px;">
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-right: 13px;">
+                                    <span>Web Design</span>
+                                </button>
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-left: 13px;">
+                                    <span>Branding</span>
+                                </button>
+                            </div>
+                        </div>
                     </span>
+                    
                 </div>
-        
                 <div class="p-3">
                     <div class="">
                         <img class="w-full" src="/HomePage-Projects/Images/2-mobile.png" alt="">
-                    </div>
+                    </div><br>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="">Zenova</strong><br>
-                        Together with the best publishers, authors and creators, Lylli offers unlimi <br>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+                        <strong class="title-mobile mt-5">Zenova</strong><br>
+                        <div style="margin-top: 13px;"> <!-- Adjust margin-top value as needed -->
+                            <a class="description-mobile">Together with the best publishers, authors and creators, Lylli offers unlimi</a> <br>
+                            <div style="margin-top:13px;">
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-right: 13px;">
+                                    <span>Web Design</span>
+                                </button>
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-left: 13px;">
+                                    <span>Branding</span>
+                                </button>
+                            </div>
+                        </div>
                     </span>
+                    
                 </div>
-        
                 <div class="p-3">
                     <div class="">
                         <img class="w-full" src="/HomePage-Projects/Images/3-mobile.png" alt="">
-                    </div>
+                    </div><br>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="">Zenova</strong><br>
-                        Together with the best publishers, authors and creators, Lylli offers unlimi <br>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+                        <strong class="title-mobile mt-5">Zenova</strong><br>
+                        <div style="margin-top: 13px;"> <!-- Adjust margin-top value as needed -->
+                            <a class="description-mobile">Together with the best publishers, authors and creators, Lylli offers unlimi</a> <br>
+                            <div style="margin-top:13px;">
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-right: 13px;">
+                                    <span>Web Design</span>
+                                </button>
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-left: 13px;">
+                                    <span>Branding</span>
+                                </button>
+                            </div>
+                        </div>
                     </span>
+                    
                 </div>
-        
                 <div class="p-3">
                     <div class="">
                         <img class="w-full" src="/HomePage-Projects/Images/4-mobile.png" alt="">
-                    </div>
+                    </div><br>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="">Zenova</strong><br>
-                        Together with the best publishers, authors and creators, Lylli offers unlimi <br>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+                        <strong class="title-mobile mt-5">Zenova</strong><br>
+                        <div style="margin-top: 13px;"> <!-- Adjust margin-top value as needed -->
+                            <a class="description-mobile">Together with the best publishers, authors and creators, Lylli offers unlimi</a> <br>
+                            <div style="margin-top:13px;">
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-right: 13px;">
+                                    <span>Web Design</span>
+                                </button>
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-left: 13px;">
+                                    <span>Branding</span>
+                                </button>
+                            </div>
+                        </div>
                     </span>
+                    
                 </div>
-        
                 <div class="p-3">
                     <div class="">
                         <img class="w-full" src="/HomePage-Projects/Images/5-mobile.png" alt="">
-                    </div>
+                    </div><br>
                     <span class="text-white" style="margin-top: 20px;">
-                        <strong class="">Zenova</strong><br>
-                        Together with the best publishers, authors and creators, Lylli offers unlimi <br>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Web Design</button>
-                        <button type="button" class="py-1 px-5 me-2 mb-2 text-sm font-medium text-gray-600 focus:outline-none bg-gray-800 rounded-full">Branding</button>
+                        <strong class="title-mobile mt-5">Zenova</strong><br>
+                        <div style="margin-top: 13px;"> <!-- Adjust margin-top value as needed -->
+                            <a class="description-mobile">Together with the best publishers, authors and creators, Lylli offers unlimi</a> <br>
+                            <div style="margin-top:13px;">
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-right: 13px;">
+                                    <span>Web Design</span>
+                                </button>
+                                <button type="button" class=" button-mobile py-1 px-5 me-2 mb-2 text-sm font-medium focus:outline-none  rounded-full" style="margin-left: 13px;">
+                                    <span>Branding</span>
+                                </button>
+                            </div>
+                        </div>
                     </span>
+                    
                 </div>
 
                 <div class="mobile-footer">
@@ -479,8 +188,8 @@
                     </h1>
 
                     <ul class="mobile-footer-links">
-                        <li class="mt-4">LinkedIn</li>
-                        <li class="mt-4">Email</li>
+                        <li class="mt-4"><a href="#" target="_blank">LinkedIn</a></li>
+                        <li class="mt-4"><a href="#" target="_blank">Email</a></li>
                     </ul>
 
                     <div class="mobile-footer-sign mt-6">
@@ -509,7 +218,25 @@
         <!-- ---------SCRIPT---------- -->
         
         <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+                const mobileNavbar = document.getElementById('mobile-navbar');
+
+                // Add click event listener to the SVG icon
+                mobileMenuIcon.addEventListener('click', function() {
+                    // Toggle the visibility of the mobile navbar
+                    if (mobileNavbar.style.display === 'block') {
+                        mobileNavbar.style.display = 'none';
+                    } else {
+                        mobileNavbar.style.display = 'block';
+                    }
+
+                    // Rotate the SVG icon
+                    mobileMenuIcon.classList.toggle('rotate-45');
+                });
+            });
             
         </script>
     </body>
 </html>
+
