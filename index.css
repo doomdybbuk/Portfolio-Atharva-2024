@@ -187,6 +187,15 @@ footer a {
         padding:175px 0;
         position:relative;
     }
+    #div2{
+        color: #FFF;
+        font-family: "Apfel Grotezk";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96%; /* 36.48px */
+        letter-spacing: -0.38px;
+    }
 
     #div3 a svg{
         transform:rotate(135deg);
@@ -206,6 +215,7 @@ footer a {
     #card-container{
         padding-top:125px;
     }
+
 }
 
 @media (min-width:421px) and (max-width:767px){
